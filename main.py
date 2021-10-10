@@ -179,4 +179,4 @@ async def monthly_debt(region: str = 'newyork',
 
 # print(flatten_prediction([10, 10, 20], ny_act_low))
 if __name__ == "__main__":
-    uvicorn.run(app, port = 5000)
+    uvicorn.run(app, port = 5000,host='0.0.0.0')
