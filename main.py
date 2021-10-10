@@ -122,7 +122,7 @@ RATE_18 = DEBT_RATE*4
 RATE_24 = DEBT_RATE*6
 
 app = FastAPI()
-@app.get("/total_debt_sat/")
+@app.get("/total_debt_sat")
 async def get_debt(region: str = 'newyork', 
                 annual_income: int = 20000, 
                 sat_reading: int = 200, 
@@ -145,7 +145,7 @@ async def get_debt(region: str = 'newyork',
         prediction+=mid_income_dif
     return {"total_debt":int(prediction)}
 
-@app.get("/monthly_debt_sat/")
+@app.get("/monthly_debt_sat")
 async def monthly_debt(region: str = 'newyork', 
                 annual_income: int = 20000, 
                 sat_reading: int = 200, 
